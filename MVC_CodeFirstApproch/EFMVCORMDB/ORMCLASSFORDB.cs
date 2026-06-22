@@ -8,7 +8,10 @@ namespace MVC_CodeFirstApproch.EFMVCORMDB
 {
     public class ORMCLASSFORDB: DbContext
     {
-
+       public ORMCLASSFORDB()
+        { 
+        
+        }
         public ORMCLASSFORDB(DbContextOptions<ORMCLASSFORDB> options) : base(options) 
         {
 
@@ -45,5 +48,5 @@ namespace MVC_CodeFirstApproch.EFMVCORMDB
             
 
         }
-}
+    }
 }
