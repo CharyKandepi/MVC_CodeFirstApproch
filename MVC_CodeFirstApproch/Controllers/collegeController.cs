@@ -7,7 +7,7 @@ namespace MVC_CodeFirstApproch.Controllers
         
         public string collegename()
         {
-                       return "ABC College";
+                 return "ABC College";
         }
     }
 }

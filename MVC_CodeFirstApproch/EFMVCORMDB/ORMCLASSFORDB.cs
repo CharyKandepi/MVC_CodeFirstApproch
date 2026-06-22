@@ -8,9 +8,14 @@ namespace MVC_CodeFirstApproch.EFMVCORMDB
 {
     public class ORMCLASSFORDB: DbContext
     {
-       public ORMCLASSFORDB()
-        { 
-        
+
+       
+        public ORMCLASSFORDB(DbContextOptions<ORMCLASSFORDB> dbContextOptions =null, DbContextOptions<ORMCLASSFORDB> dbContextOptions2 = null) :base(dbContextOptions)
+        {
+            //string[] args = new string[0];
+            //var builder = WebApplication.CreateBuilder(args);
+            //var constring = builder.Configuration.GetConnectionString("ConMVCDATABASE");
+            //builder.Services.AddDbContext<ORMCLASSFORDB>(L => L.UseSqlServer(constring));
         }
         public ORMCLASSFORDB(DbContextOptions<ORMCLASSFORDB> options) : base(options) 
         {

@@ -7,15 +7,23 @@ namespace MVC_CodeFirstApproch.Controllers
     public class StudentController : Controller
     {
 
-      
+        ORMCLASSFORDB dbcontextobj;
+
+        public StudentController(ORMCLASSFORDB context)
+        {
+            dbcontextobj = context;
+        }
         public ViewResult showStdData()
         {
 
-            ORMCLASSFORDB obj = new ORMCLASSFORDB();
-            var stdData = obj.StudentInformations;
+            //ORMCLASSFORDB obj = new ORMCLASSFORDB();
+            //var stdData = obj.StudentInformations.ToList();
 
 
-            return View();
+            var stdData2= dbcontextobj.StudentInformations.ToList();
+
+
+            return View(stdData2);
 
 
          

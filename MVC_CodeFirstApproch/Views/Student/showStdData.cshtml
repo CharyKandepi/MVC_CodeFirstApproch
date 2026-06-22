@@ -1,8 +1,11 @@
-﻿<html>
+﻿@model List< MVC_CodeFirstApproch.Models.StudentInformation>
+
+
+<html>
 	<head>
 	<title>Show Student Data</title>
 	</head>
-	<body>
+	<thead>
 		<h1>Student Data</h1>
 		<table border="1">
 			<tr>
@@ -13,8 +16,55 @@
 				<th>Address</th>
 				<th>Gender</th>
 			</tr>
-			
-			<tr>
+</thead>
+	<body>
+	@foreach (var Row in Model)
+	{
+     <tr>
+		<td>@Row.Name</td>
+		<td>@Row.Age</td>
+		<td>@Row.DOB</td>
+		<td>@Row.Address</td>
+		<td>@Row.Gender</td>
+     </tr>
+	}
+	</tbody>
+
+			@* <tr>
+		    <td>@Model[0].Id</td>
+			<td>@Model[0].Name</td>
+			<td>@Model[0].Age</td>
+			<td>@Model[0].DOB</td>
+			<td>@Model[0].Address</td>
+			<td>@Model[0].Gender</td>
+
+			</tr>
+
+		<tr>
+			<td>@Model[1].Id</td>
+			<td>@Model[1].Name</td>
+			<td>@Model[1].Age</td>
+			<td>@Model[1].DOB</td>
+			<td>@Model[1].Address</td>
+			<td>@Model[1].Gender</td>
+
+		</tr>
+
+		<tr>
+			<td>@Model[2].Id</td>
+			<td>@Model[2].Name</td>
+			<td>@Model[2].Age</td>
+			<td>@Model[2].DOB</td>
+			<td>@Model[2].Address</td>
+			<td>@Model[2].Gender</td>
+
+		</tr> *@
+
+
+
+
+
+			@* <tr>
 
 			        <td>John Doe</td>
 					<td>20</td>
@@ -39,7 +89,7 @@
 			<td>2004-04-01</td>
 			<td>321elm st toen</td>
 			<td>male</td>
-		</tr>
+		</tr> *@
 
 			</table>
 
