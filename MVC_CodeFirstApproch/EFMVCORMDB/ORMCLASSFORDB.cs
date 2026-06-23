@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MVC_CodeFirstApproch.Models;
-
 using Microsoft.Identity.Client;
+using MVC_CodeFirstApproch.EFMVCORMDB;
+using MVC_CodeFirstApproch.Models;
 
 
 namespace MVC_CodeFirstApproch.EFMVCORMDB
 {
     public class ORMCLASSFORDB: DbContext
     {
+
 
        
         public ORMCLASSFORDB(DbContextOptions<ORMCLASSFORDB> dbContextOptions =null, DbContextOptions<ORMCLASSFORDB> dbContextOptions2 = null) :base(dbContextOptions)
@@ -55,3 +56,10 @@ namespace MVC_CodeFirstApproch.EFMVCORMDB
         }
     }
 }
+
+//purpose of this DBcontext class:
+//ORMCLASSFORDB
+//      ↓
+//Connects to SQL Server
+//      ↓
+//Reads/Writes Data

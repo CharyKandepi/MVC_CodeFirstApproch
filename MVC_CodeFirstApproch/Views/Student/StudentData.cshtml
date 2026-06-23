@@ -1,41 +1,40 @@
 ﻿@* @model List< MVC_CodeFirstApproch.Models.StudentInformation>
  *@
 
-@model StudentInformation
+ @model StudentInformation
 <html>
 
-<head>
+	<head>
 
-</head>
-<body>
-	<h1>This is Student view</h1>
-	<table border="1">
-		<thead>
-			<tr>
-
+	</head>
+	<body>
+		<table border="1">
+			<thead>
+				<tr>
+				
 				<th>Name</th>
 				<th>Age</th>
 				<th>DOB</th>
 				<th>Address</th>
 				<th>Gender</th>
 
-			</tr>
+			    </tr>
 
-		</thead>
-		<tbody>
+			</thead>
+			<tbody>
 
 			@* 	@foreach (var Row in Model)
 	            { *@
-			<tr>
+                     <tr>
 				<td>@Model.Name</td>
 				<td>@Model.Age</td>
 				<td>@Model.DOB</td>
 				<td>@Model.Address</td>
 				<td>@Model.Gender</td>
-			</tr>
-			@*  } *@
+                     </tr>
+	           @*  } *@
 
-		</tbody>
-	</table>
-</body>
+			</tbody>
+		</table>
+	</body>
 </html>
