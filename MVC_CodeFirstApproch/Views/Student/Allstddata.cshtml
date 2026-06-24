@@ -1,0 +1,37 @@
+﻿ @model List<StudentInformation>
+ 
+
+
+
+
+	
+	<h1>This is Student view</h1>
+	<table border="1">
+		<thead>
+			<tr>
+
+				<th>Name</th>
+				<th>Age</th>
+				<th>DOB</th>
+				<th>Address</th>
+				<th>Gender</th>
+
+			</tr>
+
+		</thead>
+		<tbody>
+
+				@foreach (var Row in Model)
+	            {
+			<tr>
+					<td>@Row.Name</td>
+				<td>@Row.Age</td>
+					<td>@Row.DOB</td>
+					<td>@Row.Address</td>
+					<td>@Row.Gender</td>
+			</tr>
+			  } 
+
+		</tbody>
+	</table>
+	

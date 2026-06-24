@@ -34,6 +34,16 @@ namespace MVC_CodeFirstApproch.Controllers
 
          
          }
+        public ViewResult Allstddata()
+
+        {
+            var val = dbcontextobj.StudentInformations.ToList();
+            return View(val);
+        }
+        public ViewResult Mainpage()
+        {
+            return View();
+        }
 
 
        
